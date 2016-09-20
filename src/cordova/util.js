@@ -43,7 +43,7 @@ var lib_path = path.join(global_config_path, 'lib');
 exports.binname = 'cordova';
 exports.globalConfig = global_config_path;
 
-// defer defining libDirectory on exports so we don't create it if 
+// defer defining libDirectory on exports so we don't create it if
 // someone simply requires this module
 Object.defineProperty(exports,'libDirectory', {
         configurable: true,
@@ -277,7 +277,7 @@ function preProcessOptions (inputOptions) {
     }
     var projectPlatforms = this.listPlatforms(projectRoot);
     if (projectPlatforms.length === 0) {
-        throw new CordovaError('No platforms added to this project. Please use `'+exports.binname+' platform add <platform>`.');
+        // throw new CordovaError('No platforms added to this project. Please use `'+exports.binname+' platform add <platform>`.');
     }
     if (result.platforms.length === 0) {
         result.platforms = projectPlatforms;
